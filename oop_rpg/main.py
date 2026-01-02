@@ -2,12 +2,8 @@ from characters import GhostOfTshusima, Osadzo,Rudzo,Osaka,MongolBoss
 from battle import Battle
 
 def create_party():
-    party = [
-        GhostOfTshusima('Призрак Цусимы', 5),
-        Osadzo('Осадзо',5),
-        Rudzo('Рудзо',5),
-        Osaka('Осака',5)
-    ]
+    party = [GhostOfTshusima('Призрак Цусимы', 5), Osadzo('Осадзо',5),Rudzo('Рудзо',5),Osaka('Осака',5)]
+                                
     return party
 def main():
     print("МИНИ-ИГРА 'ЯПОНЦЫ ПРОТИВ УСКОГЛАЗЫХ' ")
@@ -21,7 +17,11 @@ def main():
     print(f"Фаза босса: {boss.phase}")
 
     input('\n Нажмите Enter чтобы начать бой...')
-
+    gost = GhostOfTshusima("Negr",12)
+    osadzo = Osadzo('Осадзо',7)
+    rudzo = Rudzo('Rudzo',7)
+    osaka = Osaka('Осака',7)
+    mongolboss = MongolBoss('Босс',20)
     battle = Battle(party,boss,seed=42)
     try:
         battle.start_battle()

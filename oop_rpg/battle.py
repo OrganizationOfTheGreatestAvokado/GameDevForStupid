@@ -1,7 +1,7 @@
 import random 
 import json
-from mixins import LoggerMixxin
-from characters import MongolBoss
+from mixins import LoggerMixin
+from oop_rpg.characters import MongolBoss
 
 class TurnOrder:
     def __init__(self, characters):
@@ -17,7 +17,7 @@ class TurnOrder:
         self.index += 1
         return character
 
-class Battle(LoggerMixxin):
+class Battle(LoggerMixin):
     def __init__(self,party,boss, seed=None):
         super().__init__()
         self.party = party

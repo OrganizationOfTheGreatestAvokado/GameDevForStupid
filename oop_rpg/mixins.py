@@ -1,7 +1,8 @@
 import json 
 from datetime import datetime
 
-class LoggerMixxin:
+class LoggerMixin:
+    
     def __init__(self,*args,**kwargs):
         super().__init__(*args,**kwargs)
         self.log = []
